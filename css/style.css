@@ -1,0 +1,28 @@
+/*  1. Correct the line height in all browsers.
+    2. Prevent adjustments of font size after orientation changes in iOS.*/ 
+html {
+line-height: 1.15; /* 1 */
+-webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/*Remove margins and paddings by default*/
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* set a minimum height of 100% of the viewport for the html and body elements */
+html, body {
+    min-height: 100vh;
+}
+
+/*Define a default family of web content*/
+body {
+    width: 90%;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    background-color: rgb(54, 53, 53);
+}
