@@ -17,13 +17,17 @@ html, body {
     min-height: 100vh;
 }
 
+html{
+    background-color: #f0f0f0;
+}
+
 /*Define a default family of web content*/
 body {
-    width: 80%;
-    margin: 50px auto;
+    width: 70%;
+    margin: 0 auto;
     font-family: "Open Sans", sans-serif;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #333;
 }
 
@@ -32,31 +36,37 @@ header{
 }
 
 h1{
-    margin-bottom: 10px;
+    padding-top: 50px;
     text-transform: uppercase;
     color: #e41717;
     font-size: 1.5em;
     text-align: center;
+    border-bottom: 2px solid #e41717;
 }
 
 /*CSS per als botons de navegació*/
 .menu{
-    /* display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px; */
+    margin-top: 15px;
+    text-align: left;
+    padding-left: 50px;
 }
 
 .menu button {
-    background-color: #555;
-    color: #fff;
-    border: none;
+    background-color: #ffffff;
+    font-size: 15px;
+    font-weight:500;
+    text-transform: uppercase;
+    color: #000000;
+    border: 2px solid blue;
+    margin-left: 10px;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
 }
 
 .menu button:hover {
-    background-color: #666;
+    background-color: blue;
+    color:white;
 }
 
 /*CSS per al contenidor de la calculadora i els seus inputs i botons*/
