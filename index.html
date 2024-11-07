@@ -26,32 +26,37 @@
 
     <header>
         <h1>Calculadora Intel·ligent</h1>
-        <section class="menu"> 
-            <button onclick="goBack()">⬅️ Enrere</button>
-            <button onclick="goForward()">Endavant ➡️</button>
-        </section>
+        <section class="menu">
 
-        <section id="informacio">
-            <h2>Informació del Navegador</h2>
-            <p id="navegador">Navegador Utilitzat: </p>
-            <p id="versioNavegador">Versió del Navegador: </p>
-            <p id="sistemaOperatiu">Sistema Operatiu: </p>
-            <p id="dataModificacio">Data de darrera modificació: </p>
-            <p id="idioma">Idioma: </p>
-            <p id="hostname">URL (Hostname): </p>
-        </section>
+            <div class="botons">
+                <button onclick="goBack()">⬅️ Enrere</button>
+                <button onclick="goForward()">Endavant ➡️</button>
+                <button id="EscullCalculadora">Tria la Calculadora</button>
+                <button onclick="guardaUsuari()">Configuració:</button>
+            </div>
 
+            <div id="informacio">
+                <h2>Informació del Navegador</h2>
+                <p id="navegador">Navegador Utilitzat:</p>
+                <p id="versioNavegador">Versió del Navegador:</p>
+                <p id="sistemaOperatiu">Sistema Operatiu:</p>
+                <p id="dataModificacio">Data de darrera modificació:</p>
+                <p id="idioma">Idioma:</p>
+                <p id="hostname">URL:</p>
+            </div>
+
+        </section>
     </header>
 
-    <main>
-        <section class="calculadora">
+    <main class="contenidorCalculadores">
+
+        <div class="calculadoraNormal">
             <div class="pantalles">
                 <!--Amb disabeled evitem que l'usuari escrigui directament al camp input-->
                 <input disabled id="pantallaOperacio" placeholder="0" type="text">
                 <br>
                 <input disabled id="pantallaMissatges" placeholder="0" type="text"> 
             </div>
-
             <div class="filesBotons">
                 <div class="fila">
                     <button>7</button>
@@ -59,21 +64,18 @@
                     <button>9</button>
                     <button>+</button>
                 </div>
-
                 <div class="fila">
                     <button>4</button>
                     <button>5</button>
                     <button>6</button>
                     <button>-</button>
                 </div>
-
                 <div class="fila">
                     <button>1</button>
                     <button>2</button>
                     <button>3</button>
                     <button>/</button>
                 </div>
-
                 <div class="fila">
                     <button>0</button>
                     <button>C</button>
@@ -82,7 +84,45 @@
                     <button>=</button>
                 </div>
             </div>
-        </section>
+
+            <div class="calculadoraDecimals">
+                <div class="pantalles">
+                    <!--Amb disabeled evitem que l'usuari escrigui directament al camp input-->
+                    <input disabled id="pantallaOperacio" placeholder="0" type="text">
+                    <br>
+                    <input disabled id="pantallaMissatges" placeholder="0" type="text"> 
+                </div>
+                <div class="filesBotons">
+                    <div class="fila">
+                        <button>7</button>
+                        <button>8</button>
+                        <button>9</button>
+                        <button>+</button>
+                    </div>
+                    <div class="fila">
+                        <button>4</button>
+                        <button>5</button>
+                        <button>6</button>
+                        <button>-</button>
+                    </div>
+                    <div class="fila">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>/</button>
+                    </div>
+                    <div class="fila">
+                        <button>0</button>
+                        <button>.</button>
+                        <button>C</button>
+                        <button>↩️</button>
+                        <button>*</button>
+                        <button>=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </main>
 
     <footer></footer>
