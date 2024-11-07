@@ -128,7 +128,7 @@ header h1{
     padding: 15px;
     font-size: 1.2em;
     text-align: right;
-    border: 1px solid #ddd;
+    border: 2px solid #a39696;
     border-radius: 5px;
     margin-bottom: 5px;
 }
@@ -140,7 +140,15 @@ header h1{
     width: 100%;
 }
 
+.fila{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+}
+
 .fila button {
+    flex: 1;
     padding: 15px;
     font-size:2em;
     border: none;
@@ -148,4 +156,33 @@ header h1{
     background-color: #ff7700;
     color: white;
     cursor: pointer;
+}
+
+.fila button:hover {
+    background-color: white;
+    color:#ff7700;
+    border: 2px solid #ff7700;
+}
+
+.fila5{
+    display: flex;
+    gap:10px;
+    width: 100%;
+}
+
+.fila5 button {
+    flex: 1;
+    padding: 15px;
+    font-size:2em;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff7700;
+    color: white;
+    cursor: pointer;
+}
+
+.fila5 button:hover {
+    background-color: white;
+    color:#ff7700;
+    border: 2px solid #ff7700;
 }
