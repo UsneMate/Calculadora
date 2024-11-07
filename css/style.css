@@ -10,12 +10,13 @@ line-height: 1.15; /* 1 */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
 }
 
 /* set a minimum height of 100% of the viewport for the html and body elements */
-html, body {
+/* html, body {
     min-height: 100vh;
-}
+} */
 
 html{
     background-color: #f0f0f0;
@@ -25,33 +26,39 @@ html{
 body {
     width: 70%;
     margin: 0 auto;
-    font-family: "Open Sans", sans-serif;
-    min-height: 100vh;
     background-color: #ffffff;
-    color: #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 header{
+    width: 100%;
     text-align: center;
+    margin-bottom: 15px;
+    padding-top: 20px;
+    border: 1px solid black;
+    padding-top: 20px;
 }
 
-h1{
-    padding-top: 50px;
+header h1{
     text-transform: uppercase;
     color: #e41717;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     border-bottom: 2px solid #e41717;
+    margin-bottom: 20px;
 }
 
 /*CSS per als botons de navegació*/
 .menu{
+    display: flex;
+    flex-direction: row;
     margin-top: 15px;
-    text-align: left;
-    padding-left: 50px;
+    justify-content: space-around;
 }
 
-.menu button {
+.botons button {
     background-color: #ffffff;
     font-size: 15px;
     font-weight:500;
@@ -64,16 +71,81 @@ h1{
     cursor: pointer;
 }
 
-.menu button:hover {
+.botons button:hover {
     background-color: blue;
     color:white;
 }
 
+#informacio{
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+}
+
+#informacio h2{
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+#informacio p{
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
 /*CSS per al contenidor de la calculadora i els seus inputs i botons*/
-.calculadora {
-    width: 300px;
-    background-color: #222;
-    padding: 20px;
+.contenidorCalculadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.calculadoraNormal, .calculadoraDecimal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #ff7700;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.434);
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.pantalles {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.pantalles input {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: right;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.filesBotons {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+}
+
+.fila button {
+    padding: 15px;
+    font-size:2em;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff7700;
+    color: white;
+    cursor: pointer;
 }
