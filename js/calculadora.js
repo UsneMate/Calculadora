@@ -9,3 +9,6 @@ function goForward() {
 }
 
 // Obtenir i mostrar la informació del navegador
+
+
+//variables i codi per gestionar calculadora
