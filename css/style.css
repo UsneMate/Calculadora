@@ -46,7 +46,7 @@ header h1{
     font-size: 2em;
     text-align: center;
     border-bottom: 2px solid #e41717;
-    margin-bottom: 20px;
+
 }
 
 /*CSS per als botons de navegació*/
@@ -59,6 +59,8 @@ header h1{
     flex-direction: row;
     justify-content:center;
     width: 100%;
+    border-bottom: 2px solid #e41717;
+    padding-bottom: 15px;
 }
 
 .botons button {
@@ -80,15 +82,15 @@ header h1{
 }
 
 .informacio{
-    width: 95%;
+    width: 80%;
     margin: 20px auto;
     display: flex;
-    flex-direction: column;
-    background-color: #e9ecef;
+    flex-direction: row;
     padding: 10px;
     border-radius: 5px;
     text-align: left;
     padding-top: 20px;
+    justify-content: space-between;
 }
 
 .informacio h2{
@@ -102,8 +104,29 @@ header h1{
     margin-bottom: 5px;
 }
 
+/*CSS per al formulari de configuració d'usuari i de tiupus de calculadora*/
+.configuracio {
+    width: 300px;
+}
+
+.configuracio input, .configuracio select {
+    width: 100%;
+    margin: 0;
+}
+
+.configuracio h3{
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.configuracio label{
+    font-size: 0.8em;
+    margin: 0;
+}
+
 /*CSS per al contenidor de la calculadora i els seus inputs i botons*/
-.contenidorCalculadores {
+.contenidor {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -111,6 +134,7 @@ header h1{
     max-width: 350px;
 }
 
+/*CSS calculadores*/
 .calculadoraNormal, .calculadoraDecimal{
     display: flex;
     flex-direction: column;
@@ -121,7 +145,6 @@ header h1{
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.434);
     margin-bottom: 20px;
-    width: 100%;
 }
 
 .pantalles {
