@@ -149,7 +149,32 @@ let operacio="";
 
 const MAXDIGITS = 5;
 
-//Agafem el valor de la pantalla
+//Agafem el valor de la pantalla. Cada cop que l'usuari introdueixi un número
+//aquesta pantalla s'haurà d'actualitzar.
+function actualitzarPantalla(){
+    //mostrem a la pantalla el valor actual, a la inversa no funcionaria
+    //perquè el que fariem seria guardar el valor de la pantalla en una variable
+    //i per tant no es mostraria en pantalla
+    document.getElementById("pantallaOperacio").value = operandActual;
+}
+
+//Es crea una funció afegir número per a que es vagin concatennant
+//fins a un màxim de 5 dígits abans de fer l'operació
+//Aquesta funció necessita un paràmetre perquè és el valor que es passarà
+//segons la tecla que cliqui l'usuari
+function afegirNumero(num){
+    //comprovarem que no tingui més de 5 dígits
+    //si no els té, concatenem amb el número anterior
+    //si els té, mostrem missatge d'error a l'altra pantalla
+    if(operandActual.length < MAXDIGITS) {
+        operandActual = operandActual + num;
+        //un cop concatenat, actualitzo la pantalla
+        actualitzarPantalla();
+    } else {
+        document.getElementById("pantallaMissatges").value = "Màxim 5 dígits";
+    }
+}
+
 
 
 
