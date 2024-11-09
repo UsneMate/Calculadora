@@ -51,20 +51,24 @@ header h1{
 
 /*CSS per als botons de navegació*/
 .menu{
+    margin-top: 15px;
+}
+
+.botons{
     display: flex;
     flex-direction: row;
-    margin-top: 15px;
-    justify-content: space-around;
+    justify-content:center;
+    width: 100%;
 }
 
 .botons button {
+    margin-right: 30px;
     background-color: #ffffff;
     font-size: 15px;
     font-weight:500;
     text-transform: uppercase;
     color: #000000;
     border: 2px solid blue;
-    margin-left: 10px;
     padding: 5px 10px;
     border-radius: 8px;
     cursor: pointer;
@@ -75,13 +79,16 @@ header h1{
     color:white;
 }
 
-#informacio{
+.informacio{
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
     background-color: #e9ecef;
     padding: 10px;
     border-radius: 5px;
     text-align: left;
-    width: 100%;
-    max-width: 400px;
 }
 
 #informacio h2{
