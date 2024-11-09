@@ -80,24 +80,24 @@ header h1{
 }
 
 .informacio{
-    width: 90%;
+    width: 95%;
     margin: 20px auto;
-    border: 1px solid red;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #e9ecef;
     padding: 10px;
     border-radius: 5px;
     text-align: left;
+    padding-top: 20px;
 }
 
-#informacio h2{
+.informacio h2{
     font-size: 1em;
     text-transform: uppercase;
     margin-bottom: 5px;
 }
 
-#informacio p{
+.informacio p{
     font-size: 0.8em;
     margin-bottom: 5px;
 }
