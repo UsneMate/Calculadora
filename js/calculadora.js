@@ -144,7 +144,8 @@ function esborrarConfiguracio() {
 }
 
 //Funcions i codi per fer la lógica de la calculadora
-let operandActual="";
+let operand1="";
+let operand2= "";
 let operacio="";
 
 const MAXDIGITS = 5;
@@ -155,25 +156,35 @@ function actualitzarPantalla(){
     //mostrem a la pantalla el valor actual, a la inversa no funcionaria
     //perquè el que fariem seria guardar el valor de la pantalla en una variable
     //i per tant no es mostraria en pantalla
-    document.getElementById("pantallaOperacio").value = operandActual;
+    document.getElementById("pantallaOperacio").value = operand1 + operacio + operand2;
+    document.getElementById("pantallaMissatges").value = "";
 }
 
 //Es crea una funció afegir número per a que es vagin concatennant
 //fins a un màxim de 5 dígits abans de fer l'operació
 //Aquesta funció necessita un paràmetre perquè és el valor que es passarà
 //segons la tecla que cliqui l'usuari
-function afegirNumero(num){
-    //comprovarem que no tingui més de 5 dígits
-    //si no els té, concatenem amb el número anterior
-    //si els té, mostrem missatge d'error a l'altra pantalla
-    if(operandActual.length < MAXDIGITS) {
-        operandActual = operandActual + num;
-        //un cop concatenat, actualitzo la pantalla
-        actualitzarPantalla();
+function afegirNumero(num) {
+    // Comprovem si estem amb operand1 o operand2
+    if (operador === "") {
+        // Si no hi ha operador, estem treballant amb operand1
+        if (operand1.length < MAXDIGITS) {
+            operand1 = operand1 + num; // concatenem
+            actualitzarPantalla(); // Actualitzem la pantalla
+        } else {
+            document.getElementById("pantallaMissatges").textContent = "Màxim 5 dígits";
+        }
     } else {
-        document.getElementById("pantallaMissatges").value = "Màxim 5 dígits";
+        // Si hi ha un operador, estem treballant amb operand2
+        if (operand2.length < MAXDIGITS) {
+            operand2 = onpointercancel + num; // concatenem
+            actualitzarPantalla(); // Actualitzem la pantalla amb operand2
+        } else {
+            document.getElementById("pantallaMissatges").textContent = "Màxim 5 dígits";
+        }
     }
 }
+
 
 
 
