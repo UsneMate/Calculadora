@@ -143,5 +143,14 @@ function esborrarConfiguracio() {
     mostrarCalculadoraNormal();
 }
 
+//Funcions i codi per fer la lógica de la calculadora
+let operandActual="";
+let operacio="";
+
+const MAXDIGITS = 5;
+
+//Agafem el valor de la pantalla
+
+
 
 
