@@ -70,6 +70,78 @@ window.onload = mostraInformacioNavegador;
 
 
 
-//variables i codi per gestionar calculadora
+//variables i codi per gestionar configuració calculadora i usuari
+// Guardar configuració a localStorage
+function guardarConfiguracio() {
+    const nomUsuari = document.getElementById('nomUsuari').value;
+    const tipusCalculadora = document.getElementById('tipusCalculadora').value;
+
+    if (nomUsuari && tipusCalculadora) {
+        // Guardar la configuració a localStorage
+        localStorage.setItem('nomUsuari', nomUsuari);
+        localStorage.setItem('tipusCalculadora', tipusCalculadora);
+
+        // Mostrar el nom d'usuari a la barra de botons
+        document.getElementById('MostrarNomUsuari').textContent = `Nom d'Usuari: ${nomUsuari}`;
+
+        // Actualitzar el tipus de calculadora
+        if (tipusCalculadora === 'decimal') {
+            mostrarCalculadoraDecimal();
+        } else {
+            mostrarCalculadoraNormal();
+        }
+    } else {
+        alert('Si us plau, omple tots els camps.');
+    }
+}
+
+// Carregar la configuració des de localStorage quan es carrega la pàgina
+window.onload = function() {
+    const nomUsuari = localStorage.getItem('nomUsuari');
+    const tipusCalculadora = localStorage.getItem('tipusCalculadora');
+
+    if (nomUsuari) {
+        document.getElementById('MostrarNomUsuari').textContent = `Nom d'Usuari: ${nomUsuari}`;
+        document.getElementById('nomUsuari').value = nomUsuari;
+    }
+
+    if (tipusCalculadora) {
+        document.getElementById('tipusCalculadora').value = tipusCalculadora;
+
+        if (tipusCalculadora === 'decimal') {
+            mostrarCalculadoraDecimal();
+        } else {
+            mostrarCalculadoraNormal();
+        }
+    }
+};
+
+// Mostrar la calculadora normal
+function mostrarCalculadoraNormal() {
+    document.getElementById('calculadoraNormal').style.display = 'block';
+    document.getElementById('calculadoraDecimal').style.display = 'none';
+}
+
+// Mostrar la calculadora decimal
+function mostrarCalculadoraDecimal() {
+    document.getElementById('calculadoraNormal').style.display = 'none';
+    document.getElementById('calculadoraDecimal').style.display = 'block';
+}
+
+// Funció per esborrar la configuració
+function esborrarConfiguracio() {
+    // Esborrar les dades de localStorage
+    localStorage.removeItem('nomUsuari');
+    localStorage.removeItem('tipusCalculadora');
+
+    // Restablir la interfície
+    document.getElementById('MostrarNomUsuari').textContent = 'Nom d\'Usuari: ';
+    document.getElementById('nomUsuari').value = '';
+    document.getElementById('tipusCalculadora').value = 'normal';
+
+    // Mostrar la calculadora normal per defecte
+    mostrarCalculadoraNormal();
+}
+
 
 
