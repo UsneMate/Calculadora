@@ -191,9 +191,16 @@ function definirOperador(simbol){
     //només ens guardarem l'perador si tenim introduit el primer operand
     if(operand1 !==""){
         operador=simbol;
+        //ara actualitzem pantalla i guarda l'operador
         actualitzarPantalla();
     }
 } 
+
+//funció per calcular el resultat de les operacions
+//Aquesta funció ens servirà igual èr la calculadora en decimal
+function calcularResultat(){
+    
+}
 
 
 
