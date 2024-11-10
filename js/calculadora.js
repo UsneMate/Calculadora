@@ -146,12 +146,20 @@ window.onload = function() {
 function mostrarCalculadoraNormal() {
     document.getElementById('calculadoraNormal').style.display = 'block';
     document.getElementById('calculadoraDecimals').style.display = 'none';
+    document.getElementById('calculadoraCientifica').style.display = 'none';
 }
 
 // Mostrar la calculadora decimal
 function mostrarCalculadoraDecimal() {
     document.getElementById('calculadoraNormal').style.display = 'none';
     document.getElementById('calculadoraDecimals').style.display = 'block';
+    document.getElementById('calculadoraCientifica').style.display = 'none';
+}
+
+function mostrarCalculadoraCientifica() {
+    document.getElementById('calculadoraNormal').style.display = 'none';
+    document.getElementById('calculadoraCientifica').style.display = 'block';
+    document.getElementById('calculadoraDecimals').style.display = 'none';
 }
 
 // Funció per esborrar la configuració
