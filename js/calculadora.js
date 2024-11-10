@@ -185,6 +185,12 @@ function afegirNumero(num) {
     }
 }
 
+//Funció per definir l'operador escollit per l'usuari
+//com que l'operador és el que tria l'usuari, s'haurà de passar per paràmetre
+function definirOperador(simbol){
+ 
+}
+
 
 
 
