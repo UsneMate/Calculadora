@@ -134,11 +134,13 @@ window.onload = function() {
 
         if (tipusCalculadora === 'decimal') {
             mostrarCalculadoraDecimal();
+        } else if (tipusCalculadora === 'cientifica') {
+            mostrarCalculadoraCientifica();
         } else {
             mostrarCalculadoraNormal();
         }
     }
-};
+}
 
 // Mostrar la calculadora normal
 function mostrarCalculadoraNormal() {
