@@ -325,3 +325,8 @@ function calcularSin() {
     operand1 = Math.sin(parseFloat(operand1)).toString();
     actualitzarPantalla();
 }
+
+function calcularCos() {
+    operand1 = Math.cos(parseFloat(operand1)).toString();
+    actualitzarPantalla();
+}
