@@ -303,8 +303,22 @@ let memoria = 0;
 
 function memoritzarNumero() {
     const pantalla = getPantallaOperacio();
+    const pantallaMissatges = getPantallaMissatges();
     memoria = parseFloat(pantalla.value) || 0;
     pantallaMissatges.value = "El número guardat és: " + memoria;
+}
+
+function recuperarNumero() {
+    const pantalla = getPantallaOperacio();
+    const pantallaMissatges = getPantallaMissatges();
+    pantalla.value = memoria;
+    pantallaMissatges.value = "El número recuperat és: " + memoria;
+}
+
+function esborrarMemoria() {
+    const pantallaMissatges = getPantallaMissatges();
+    memoria = 0;
+    pantallaMissatges = "Memòria esborrada";
 }
 
 
