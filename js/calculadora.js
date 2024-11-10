@@ -198,6 +198,8 @@ function actualitzarPantalla() {
 //Aquesta funció necessita un paràmetre perquè és el valor que es passarà
 //segons la tecla que cliqui l'usuari
 function afegirNumero(num) {
+    //obtinc la pantalla de misstages segons calculadora
+    const pantallaMissatges = getPantallaMissatges();
     // Comprovem si estem amb operand1 o operand2
     if (operador === "") {
         // Si no hi ha operador, estem treballant amb operand1
@@ -205,7 +207,7 @@ function afegirNumero(num) {
             operand1 = operand1 + num; // concatenem
             actualitzarPantalla(); // Actualitzem la pantalla
         } else {
-            document.getElementById("pantallaMissatges").value = "Màxim 5 dígits";
+            pantallaMissatges.value = "Màxim 5 dígits";
         }
     } else {
         // Si hi ha un operador, estem treballant amb operand2
@@ -213,7 +215,7 @@ function afegirNumero(num) {
             operand2 = operand2 + num; // concatenem
             actualitzarPantalla(); // Actualitzem la pantalla amb operand2
         } else {
-            document.getElementById("pantallaMissatges").value = "Màxim 5 dígits";
+            pantallaMissatges.value = "Màxim 5 dígits";
         }
     }
 }
@@ -332,7 +334,7 @@ function calcularCos() {
 }
 
 function calcularPotencia() {
-    operand1 = Math.pow(parseFloat(operand1)).toString();
+    operand1 = Math.pow(parseFloat(operand1), 2).toString();
     actualitzarPantalla();
 }
 
