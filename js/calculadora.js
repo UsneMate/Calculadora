@@ -198,8 +198,34 @@ function definirOperador(simbol){
 
 //funció per calcular el resultat de les operacions
 //Aquesta funció ens servirà igual èr la calculadora en decimal
+//perquè convertim a float i d'aquesta manera ens accepta els decimals
 function calcularResultat(){
+    let resultat;
+    const NUM1 = parseFloat(operand1);
+    const NUM2 = parseFloat(operand2);
+
+    //segons el símbol que ens arribi farem o una opració o una altra
+    //com tant operador1 com operador2 i operador són variables globals,
+    //les detecta dins de la funció.
+
+    switch (operador) {
+        case "+":
+            resultat = NUM1 + NUM2;
+            break;
+        case "-":
+            resultat = NUM1 - NUM2;
+            break;
+        case "*":
+            resultat = NUM1 * NUM2;
+            break;
+        case "/":
+            resultat = NUM1 / NUM2;
+            break;
     
+        default:
+            resultat = "Hi ha un error";
+            break;
+    }
 }
 
 
