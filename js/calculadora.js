@@ -298,6 +298,14 @@ function esborrarPantalla(){
     actualitzarPantalla();
 }
 
+//codi específic de calculadora científica
+let memoria = 0;
+
+function memoritzarNumero() {
+    const pantalla = getPantallaOperacio();
+    memoria = parseFloat(pantalla.value) || 0;
+    pantallaMissatges.value = "El número guardat és: " + memoria;
+}
 
 
 
