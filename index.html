@@ -139,6 +139,49 @@
                 </div>
             </div>
         </div>
+
+        <div class="calculadoraCientifica" id="calculadoraCientifica" style="display: none;">
+            <div class="pantalles">
+                <!--Amb disabeled evitem que l'usuari escrigui directament al camp input-->
+                <input disabled id="pantallaOperacioCientifica>" placeholder="0" type="text">
+                <br>
+                <input disabled id="pantallaMissatgesCientifica" placeholder="0" type="text"> 
+            </div>
+            <div class="filesBotons">
+                <div class="fila">
+                    <button onclick="afegirNumero(7)">7</button>
+                    <button onclick="afegirNumero(8)">8</button>
+                    <button onclick="afegirNumero(9)">9</button>
+                    <button onclick="definirOperador('+')">+</button>
+                </div>
+                <div class="fila">
+                    <button onclick="afegirNumero(4)">4</button>
+                    <button onclick="afegirNumero(5)">5</button>
+                    <button onclick="afegirNumero(6)">6</button>
+                    <button onclick="definirOperador('-')">-</button>
+                </div>
+                <div class="fila">
+                    <button onclick="afegirNumero(1)">1</button>
+                    <button onclick="afegirNumero(2)">2</button>
+                    <button onclick="afegirNumero(3)">3</button>
+                    <button onclick="definirOperador('/')">/</button>
+                </div>
+                <div class="fila">
+                    <button onclick="afegirNumero(0)">0</button>
+                    <button onclick="afegirNumero('.')">.</button>
+                    <button onclick="esborrarPantalla()">C</button>
+                    <button onclick="esborrarUltimNumero()">↩️</button>
+                    <button onclick="definirOperador('*')">*</button>
+                    <button onclick="calcularResultat()">=</button>
+                </div>
+
+                <div class="fila">
+                    <button>sin</button>
+                    <button>cos</button>
+                    <button>log</button>
+                </div>
+            </div>
+        </div>
         
     </main>
 
