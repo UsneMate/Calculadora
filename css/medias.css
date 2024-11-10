@@ -1,0 +1,54 @@
+/*CSS adaptacions pantalles*/
+@media only screen and (max-width: 1080px) and (orientation: landscape) {
+    body {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 412px) {
+    /* El teu CSS per a aquest dispositiu en mode retrat */
+    body {
+        width: 100%;
+    }
+
+    header h1{
+        font-size: 1.5em;
+    }
+
+    .botons button {
+        margin-right: 10px;
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .informacio{
+        margin: 10px auto;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 5px;
+    }
+
+    .configuracio {
+        margin-top: 10px;
+    }
+
+    .calculadoraNormal, .calculadoraDecimals, .calculadoraCientifica{
+        max-width: 370px;
+        width: 100%;
+    }
+
+    .pantalles input {
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    .filesBotons {
+        gap: 5px;
+    }
+
+    .fila button {
+        padding: 8px;
+        font-size:1.2em;
+        border-radius: 5px;
+    }
+}
