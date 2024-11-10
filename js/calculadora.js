@@ -188,8 +188,12 @@ function afegirNumero(num) {
 //Funció per definir l'operador escollit per l'usuari
 //com que l'operador és el que tria l'usuari, s'haurà de passar per paràmetre
 function definirOperador(simbol){
- 
-}
+    //només ens guardarem l'perador si tenim introduit el primer operand
+    if(operand1 !==""){
+        operador=simbol;
+        actualitzarPantalla();
+    }
+} 
 
 
 
