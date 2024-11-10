@@ -239,6 +239,15 @@ function calcularResultat(){
 
 }
 
+//fem la funció per esborrar el contingut de la pantalla
+//quan l'usuari activa el botó C
+function esborrarPantalla(){
+    operand1="";
+    operand2="";
+    operador="";
+    actualitzarPantalla();
+}
+
 
 
 
