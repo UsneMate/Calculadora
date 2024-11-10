@@ -332,6 +332,16 @@ function calcularCos() {
 }
 
 function calcularPotencia() {
+    operand1 = Math.pow(parseFloat(operand1)).toString();
+    actualitzarPantalla();
+}
+
+function calcularPercentage() {
+    operand1 = (parseFloat(operand1) / 100).toString();
+    actualitzarPantalla();
+}
+
+function calcularArrelQuadrada() {
     operand1 = Math.sqrt(parseFloat(operand1)).toString();
     actualitzarPantalla();
 }
