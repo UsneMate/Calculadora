@@ -72,6 +72,8 @@ window.onload = mostraInformacioNavegador;
 function getPantallaOperacio() {
     if (document.getElementById("calculadoraDecimals").style.display === "block") {
         return document.getElementById("pantallaOperacioDecimals");
+    } else if (document.getElementById("calculadoraCientifica").style.display === "block") {
+        return document.getElementById("pantallaOperacioCientifica");
     } else {
         return document.getElementById("pantallaOperacio");
     }
@@ -80,6 +82,8 @@ function getPantallaOperacio() {
 function getPantallaMissatges() {
     if (document.getElementById("calculadoraDecimals").style.display === "block") {
         return document.getElementById("pantallaMissatgesDecimals");
+    } else if (document.getElementById("calculadoraCientifica").style.display === "block"){
+        return document.getElementById("pantallaMissatgesCientifica");
     } else {
         return document.getElementById("pantallaMissatges");
     }
@@ -105,6 +109,8 @@ function guardarConfiguracio() {
         // Actualitzar el tipus de calculadora
         if (tipusCalculadora === 'decimal') {
             mostrarCalculadoraDecimal();
+        } else if (tipusCalculadora === 'cientifica') {
+            mostrarCalculadoraCientifica();
         } else {
             mostrarCalculadoraNormal();
         }
