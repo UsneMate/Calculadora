@@ -140,7 +140,7 @@
             </div>
         </div>
 
-        <div class="calculadoraCientifica" id="calculadoraCientifica" style="display: none;">
+        <div class="calculadoraCientifica" id="calculadoraCientifica">
             <div class="pantalles">
                 <!--Amb disabeled evitem que l'usuari escrigui directament al camp input-->
                 <input disabled id="pantallaOperacioCientifica>" placeholder="0" type="text">
@@ -149,9 +149,17 @@
             </div>
             <div class="filesBotons">
                 <div class="fila">
-                    <button>M+</button>
-                    <button>MR</button>
-                    <button>MC</button>
+                    <button onclick="memoritzarNumero()">M+</button>
+                    <button onclick="recuperarNumero()">MR</button>
+                    <button onclick="esborrarMemoria()">MC</button>
+                </div>
+
+                <div class="fila">
+                    <button onclick="calcularSin()">sin</button>
+                    <button onclick="calcularCos()">cos</button>
+                    <button onclick="calcularPotencia()">x<sup>2</sup></button>
+                    <button onclick="calcularPercentatge()">%</button>
+                    <button onclick="calcularArrelQuadrada()">&#x221A;x<sup>2</sup></button>
                 </div>
 
                 <div class="fila">
@@ -179,12 +187,6 @@
                     <button onclick="esborrarUltimNumero()">↩️</button>
                     <button onclick="definirOperador('*')">*</button>
                     <button onclick="calcularResultat()">=</button>
-                </div>
-
-                <div class="fila">
-                    <button>sin</button>
-                    <button>cos</button>
-                    <button>log</button>
                 </div>
             </div>
         </div>
