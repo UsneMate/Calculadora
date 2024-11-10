@@ -144,19 +144,19 @@ function esborrarConfiguracio() {
 }
 
 //Funcions i codi per fer la lógica de la calculadora
-let operand1="";
-let operand2= "";
-let operacio="";
+let operand1 = "";
+let operand2 = "";
+let operador = "";
 
 const MAXDIGITS = 5;
 
 //Agafem el valor de la pantalla. Cada cop que l'usuari introdueixi un número
 //aquesta pantalla s'haurà d'actualitzar.
-function actualitzarPantalla(){
+function actualitzarPantalla() {
     //mostrem a la pantalla el valor actual, a la inversa no funcionaria
     //perquè el que fariem seria guardar el valor de la pantalla en una variable
     //i per tant no es mostraria en pantalla
-    document.getElementById("pantallaOperacio").value = operand1 + operacio + operand2;
+    document.getElementById("pantallaOperacio").value = operand1 + operador + operand2;
     document.getElementById("pantallaMissatges").value = "";
 }
 
@@ -172,15 +172,15 @@ function afegirNumero(num) {
             operand1 = operand1 + num; // concatenem
             actualitzarPantalla(); // Actualitzem la pantalla
         } else {
-            document.getElementById("pantallaMissatges").textContent = "Màxim 5 dígits";
+            document.getElementById("pantallaMissatges").value = "Màxim 5 dígits";
         }
     } else {
         // Si hi ha un operador, estem treballant amb operand2
         if (operand2.length < MAXDIGITS) {
-            operand2 = onpointercancel + num; // concatenem
+            operand2 = operand2 + num; // concatenem
             actualitzarPantalla(); // Actualitzem la pantalla amb operand2
         } else {
-            document.getElementById("pantallaMissatges").textContent = "Màxim 5 dígits";
+            document.getElementById("pantallaMissatges").value = "Màxim 5 dígits";
         }
     }
 }
