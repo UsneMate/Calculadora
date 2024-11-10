@@ -330,3 +330,8 @@ function calcularCos() {
     operand1 = Math.cos(parseFloat(operand1)).toString();
     actualitzarPantalla();
 }
+
+function calcularPotencia() {
+    operand1 = Math.sqrt(parseFloat(operand1)).toString();
+    actualitzarPantalla();
+}
