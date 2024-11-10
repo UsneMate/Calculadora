@@ -247,7 +247,7 @@ function calcularResultat(){
     //un cop fet el calcul mostrem el resultat a pantalla amb:
     //si guardem el resultat a operand1, amb la funció actualitzar pantalla,
     //es mostrarà a la pantalla
-    operand1 = resultat.toString;
+    operand1 = resultat.toString();
     //un cop feta l'opreació, s'ha d'actualitzar els valors de operand2 i
     //operador a que no tinguin valor
     operand2 = "";
