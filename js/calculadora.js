@@ -71,7 +71,7 @@ window.onload = mostraInformacioNavegador;
 //calculadora activa, tant de pantalla operacions com de pantalla missatges
 function getPantallaOperacio() {
     if (document.getElementById("calculadoraDecimals").style.display === "block") {
-        return document.getElementById("pantallaOperacioDecimal");
+        return document.getElementById("pantallaOperacioDecimals");
     } else {
         return document.getElementById("pantallaOperacio");
     }
@@ -79,7 +79,7 @@ function getPantallaOperacio() {
 
 function getPantallaMissatges() {
     if (document.getElementById("calculadoraDecimals").style.display === "block") {
-        return document.getElementById("pantallaMissatgesDecimal");
+        return document.getElementById("pantallaMissatgesDecimals");
     } else {
         return document.getElementById("pantallaMissatges");
     }
