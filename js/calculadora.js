@@ -185,6 +185,23 @@ function afegirNumero(num) {
     }
 }
 
+//funcio per esborrar l'últim número afegit
+function esborrarUltimNumero() {
+    if (operador === "") {
+        //Elimina l'últim caràcter de operand1
+        //slice s'utilitza per aconseguir una part d'una cadena
+        //(Inici, fi), on fi és l'element que volem treure
+        //per aquest motiu és -1
+        operand1 = operand1.slice(0, -1);
+    } else {
+        //Elimina l'últim caràcter de operand2
+        operand2 = operand2.slice(0, -1);
+    }
+    //Actualitzem la pantalla per reflectir els canvis
+    actualitzarPantalla();
+}
+
+
 //Funció per definir l'operador escollit per l'usuari
 //com que l'operador és el que tria l'usuari, s'haurà de passar per paràmetre
 function definirOperador(simbol){
