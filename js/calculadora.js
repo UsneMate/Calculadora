@@ -318,10 +318,6 @@ function recuperarNumero() {
 function esborrarMemoria() {
     const pantallaMissatges = getPantallaMissatges();
     memoria = 0;
-    pantallaMissatges = "Memòria esborrada";
+    pantallaMissatges.value = "Memòria esborrada";
 }
-
-
-
-
 
