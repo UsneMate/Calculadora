@@ -135,7 +135,7 @@ header h1{
 }
 
 /*CSS calculadores*/
-.calculadoraNormal, .calculadoraDecimal{
+.calculadoraNormal, .calculadoraDecimals{
     display: flex;
     flex-direction: column;
     align-items: center;

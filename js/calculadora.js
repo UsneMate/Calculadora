@@ -67,6 +67,24 @@ function detectaSistemaOperatiu() {
 // Executa la funció mostraInformacioNavegador quan la pàgina està carregada
 window.onload = mostraInformacioNavegador;
 
+//detectar el tipus de calculadora activa i retorna la pantalla de la
+//calculadora activa, tant de pantalla operacions com de pantalla missatges
+function getPantallaOperacio() {
+    if (document.getElementById("calculadoraDecimals").style.display === "block") {
+        return document.getElementById("pantallaOperacioDecimal");
+    } else {
+        return document.getElementById("pantallaOperacio");
+    }
+}
+
+function getPantallaMissatges() {
+    if (document.getElementById("calculadoraDecimals").style.display === "block") {
+        return document.getElementById("pantallaMissatgesDecimal");
+    } else {
+        return document.getElementById("pantallaMissatges");
+    }
+}
+
 
 
 
@@ -119,13 +137,13 @@ window.onload = function() {
 // Mostrar la calculadora normal
 function mostrarCalculadoraNormal() {
     document.getElementById('calculadoraNormal').style.display = 'block';
-    document.getElementById('calculadoraDecimal').style.display = 'none';
+    document.getElementById('calculadoraDecimals').style.display = 'none';
 }
 
 // Mostrar la calculadora decimal
 function mostrarCalculadoraDecimal() {
     document.getElementById('calculadoraNormal').style.display = 'none';
-    document.getElementById('calculadoraDecimal').style.display = 'block';
+    document.getElementById('calculadoraDecimals').style.display = 'block';
 }
 
 // Funció per esborrar la configuració
@@ -153,11 +171,10 @@ const MAXDIGITS = 5;
 //Agafem el valor de la pantalla. Cada cop que l'usuari introdueixi un número
 //aquesta pantalla s'haurà d'actualitzar.
 function actualitzarPantalla() {
-    //mostrem a la pantalla el valor actual, a la inversa no funcionaria
-    //perquè el que fariem seria guardar el valor de la pantalla en una variable
-    //i per tant no es mostraria en pantalla
-    document.getElementById("pantallaOperacio").value = operand1 + operador + operand2;
-    document.getElementById("pantallaMissatges").value = "";
+    const pantallaOperacio = getPantallaOperacio();
+    const pantallaMissatges = getPantallaMissatges();
+    pantallaOperacio.value = operand1 + operador + operand2;
+    pantallaMissatges.value = "";
 }
 
 //Es crea una funció afegir número per a que es vagin concatennant
