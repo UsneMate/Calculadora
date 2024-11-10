@@ -321,3 +321,7 @@ function esborrarMemoria() {
     pantallaMissatges.value = "Memòria esborrada";
 }
 
+function calcularSin() {
+    operand1 = Math.sin(parseFloat(operand1)).toString();
+    actualitzarPantalla();
+}
